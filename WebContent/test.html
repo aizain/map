@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>map</title>
+    <script type="text/javascript" src="https://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/map/MapManager.js"></script>
+  
+	  <style type="text/css">
+	  </style>
+  
+  </head>
+  <body class="claro">
+    <div id="map"></div>
+    <div id="time_layer" class="dijitBorders">
+      <div>
+        <span class="headerText">TimeSlider</span>
+        <div id="timeInfo" class="labelText"></div>
+         <div id="timeSliderDiv"></div>
+      </div>
+    </div>
+  </body>
+   <script>
+      var map1 = MapManager.getMap(MapManager.Type.ArcgisMap);
+      var featureSet;
+      var layerDefinition;
+      
+      
+      map1.ready = function() {
+          ready();
+          // addTimeSlider();
+      }
+      
+      map1.click = function(e) {
+          console.debug("click");
+          if(undefined != e.graphic) {
+              console.debug("click: click graphic");
+              return;
+          }
+          map1.addPoint({
+              datas: "aaaa",
+              layerId: "featureLayer",
+              point: map1.Utils.getEventPoint(e),
+              style: ArcgisMap.Style.Symbol.testPictureSymbol,
+              info: {
+                  title: "aaa",
+                  content: "bbb"
+              },
+          });
+      }
+      
+      function ready() {
+          console.debug("ready");
+          var url = "/map/data/IMSIDatas.json";
+          $.ajax({
+              async: false, 
+              url: url, 
+              dataType: "text", // 响应类型
+              success: function(data){ 
+                  featureSet = JSON.parse(data);
+              }, 
+              error: function(result) {
+                  console.debug(result);
+                  console.debug("err");
+              }
+          }); 
+          var url = "/map/data/options.json";
+          $.ajax({
+              async: false, 
+              url: url, 
+              dataType: "text", // 响应类型
+              success: function(data){ 
+                  layerDefinition = JSON.parse(data);
+              }, 
+              error: function(result) {
+                  console.debug(result);
+                  console.debug("err");
+              }
+          });
+          
+          map1.addFLayer({
+              layerId: "featureLayer", 
+              featureSet: featureSet, 
+              index: 2,
+              layerDefinition: layerDefinition,
+              timeExtent: ["11/1/2014", "11/1/2015"],
+          });
+          
+          var url = "/map/data/point.json";
+          $.ajax({
+              async: false, 
+              url: url, 
+              dataType: "text", // 响应类型
+              success: function(data){ 
+                  featureSet = JSON.parse(data);
+              }, 
+              error: function(result) {
+                  console.debug(result);
+                  console.debug("err");
+              }
+          });
+          
+          layerDefinition = {
+                  "geometryType": "esriGeometryPoint",  
+                  "objectIdField": "ObjectID",
+                  "fields": [{  
+                    "name": "ObjectID",  
+                    "type": "esriFieldTypeOID",  
+                    "alias": "ObjectID"  
+                  }]
+          } 
+          map1.addHeatFLayer({
+              layerId: "heatLayer", 
+              index: 10,
+              layerDefinition: layerDefinition,
+          });
+          var hDataUrl = "/map/data/point.json";
+          map1.addDatasInFLayer({
+              url: hDataUrl, 
+              layerId: "heatLayer"
+          });
+          
+          map1.addPolyline({
+              datas: "aaaa",
+              layerId: "featureLayer",
+              points: [[[109, 38],[100 , 30]]],
+              style: ArcgisMap.Style.Symbol.testPolySymbol,
+          });
+          
+          map1.addArrow({
+              datas: "aaaa",
+              layerId: "featureLayer",
+              points: [[[111, 31],[108 , 32]]],
+              style: ArcgisMap.Style.Symbol.testPolySymbol,
+          });
+      }
+      
+      function addTimeSlider() {
+          MapManager.addTimeSlider(map1, {
+              id: "timeSliderDiv",
+              timeExtent: ["11/1/2014", "11/1/2015"],
+              thumbCount: 2,
+              thumbIndexes: [],
+          });
+      }
+      
+    </script>
+</html>
+ 

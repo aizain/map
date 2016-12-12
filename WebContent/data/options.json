@@ -1,0 +1,344 @@
+{
+    "currentVersion": 10.41, 
+    "id": 0, 
+    "name": "ks_earthquakes_since_2000", 
+    "type": "Feature Layer", 
+    "serviceItemId": "b32c4cc2e0844fe2914d76ff6a68b712", 
+    "displayField": "time", 
+    "description": "ks_earthquakes_since_2000", 
+    "copyrightText": "", 
+    "defaultVisibility": true, 
+    "editingInfo": {
+        "lastEditDate": 1448465485492
+    }, 
+    "relationships": [ ], 
+    "isDataVersioned": false, 
+    "supportsCalculate": true, 
+    "supportsTruncate": true, 
+    "supportsAttachmentsByUploadId": true, 
+    "supportsRollbackOnFailureParameter": true, 
+    "supportsStatistics": true, 
+    "supportsAdvancedQueries": true, 
+    "supportsValidateSql": true, 
+    "supportsCoordinatesQuantization": true, 
+    "supportsApplyEditsWithGlobalIds": false, 
+    "advancedQueryCapabilities": {
+        "supportsPagination": true, 
+        "supportsQueryRelatedPagination": true, 
+        "supportsQueryWithDistance": true, 
+        "supportsReturningQueryExtent": true, 
+        "supportsStatistics": true, 
+        "supportsOrderBy": true, 
+        "supportsDistinct": true, 
+        "supportsQueryWithResultType": true, 
+        "supportsSqlExpression": true, 
+        "supportsAdvancedQueryRelated": true, 
+        "supportsReturningGeometryCentroid": false
+    }, 
+    "useStandardizedQueries": false, 
+    "geometryType": "esriGeometryPoint", 
+    "minScale": 0, 
+    "maxScale": 0, 
+    "extent": {
+        "xmin": -98.22339999999996, 
+        "ymin": 36.92440000000005, 
+        "xmax": -97.32599999999996, 
+        "ymax": 37.445100000000025, 
+        "spatialReference": {
+            "wkid": 4326, 
+            "latestWkid": 4326
+        }
+    }, 
+    "drawingInfo": {
+        "renderer": {
+            "type": "simple", 
+            "label": "", 
+            "description": "", 
+            "symbol": {
+                "angle": 0, 
+                "xoffset": 0, 
+                "yoffset": 0, 
+                "type": "esriSMS", 
+                "style": "esriSMSCircle",
+                "color": [76,115,0,255], 
+                "size": 8
+            }
+        }, 
+        "transparency": 0
+    }, 
+    "timeInfo": {
+        "startTimeField": "date_evt", 
+        "endTimeField": "", 
+        "trackIdField": "", 
+        "timeExtent": [
+            1199177056990, 
+            1447241790050
+        ], 
+        "timeReference": {
+            "timeZone": "UTC", 
+            "respectDaylightSaving": false
+        }, 
+        "timeInterval": 0, 
+        "timeIntervalUnits": "", 
+        "exportOptions": {
+            "useTime": false, 
+            "timeDataCumulative": false, 
+            "TimeOffset": 0, 
+            "timeOffsetUnits": "esriTimeUnitsCenturies"
+        }, 
+        "hasLiveData": false
+    }, 
+    "allowGeometryUpdates": true, 
+    "hasAttachments": false, 
+    "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText", 
+    "hasM": false, 
+    "hasZ": true, 
+    "enableZDefaults": true, 
+    "zDefault": 0, 
+    "objectIdField": "OBJECTID", 
+    "globalIdField": "", 
+    "typeIdField": "", 
+    "fields": [
+        {
+            "name": "OBJECTID", 
+            "type": "esriFieldTypeOID", 
+            "alias": "OBJECTID", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": false, 
+            "editable": false, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "time", 
+            "type": "esriFieldTypeString", 
+            "alias": "time", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "latitude", 
+            "type": "esriFieldTypeDouble", 
+            "alias": "latitude", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "longitude", 
+            "type": "esriFieldTypeDouble", 
+            "alias": "longitude", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "depth", 
+            "type": "esriFieldTypeDouble", 
+            "alias": "depth", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "mag", 
+            "type": "esriFieldTypeDouble", 
+            "alias": "mag", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "magType", 
+            "type": "esriFieldTypeString", 
+            "alias": "magType", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "nst", 
+            "type": "esriFieldTypeInteger", 
+            "alias": "nst", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "gap", 
+            "type": "esriFieldTypeString", 
+            "alias": "gap", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "dmin", 
+            "type": "esriFieldTypeDouble", 
+            "alias": "dmin", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "rms", 
+            "type": "esriFieldTypeDouble", 
+            "alias": "rms", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "net", 
+            "type": "esriFieldTypeString", 
+            "alias": "net", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "id", 
+            "type": "esriFieldTypeString", 
+            "alias": "id", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "updated", 
+            "type": "esriFieldTypeString", 
+            "alias": "updated", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "place", 
+            "type": "esriFieldTypeString", 
+            "alias": "place", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "type", 
+            "type": "esriFieldTypeString", 
+            "alias": "type", 
+            "sqlType": "sqlTypeOther", 
+            "length": 8000, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "z", 
+            "type": "esriFieldTypeInteger", 
+            "alias": "z", 
+            "sqlType": "sqlTypeOther", 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }, 
+        {
+            "name": "date_evt", 
+            "type": "esriFieldTypeDate", 
+            "alias": "Date", 
+            "sqlType": "sqlTypeOther", 
+            "length": 0, 
+            "nullable": true, 
+            "editable": true, 
+            "domain": null, 
+            "defaultValue": null
+        }
+    ], 
+    "indexes": [
+        {
+            "name": "PK__ks_earth__F4B70D85CF3E44A3", 
+            "fields": "OBJECTID", 
+            "isAscending": true, 
+            "isUnique": true, 
+            "description": "clustered, unique, primary key"
+        }, 
+        {
+            "name": "user_875.ks_earthquakes_since_2000_ks_earthquakes_since_2000_Shape_sidx", 
+            "fields": "Shape", 
+            "isAscending": false, 
+            "isUnique": false, 
+            "description": "Shape Index"
+        }
+    ], 
+    "types": [ ], 
+    "templates": [
+        {
+            "name": "New Feature", 
+            "description": "", 
+            "drawingTool": "esriFeatureEditToolNone", 
+            "prototype": {
+                "attributes": {
+                    "time": null, 
+                    "latitude": null, 
+                    "longitude": null, 
+                    "depth": null, 
+                    "mag": null, 
+                    "magType": null, 
+                    "nst": null, 
+                    "gap": null, 
+                    "dmin": null, 
+                    "rms": null, 
+                    "net": null, 
+                    "id": null, 
+                    "updated": null, 
+                    "place": null, 
+                    "type": null, 
+                    "z": null, 
+                    "date_evt": null
+                }
+            }
+        }
+    ], 
+    "supportedQueryFormats": "JSON", 
+    "hasStaticData": false, 
+    "maxRecordCount": 1000, 
+    "standardMaxRecordCount": 32000, 
+    "tileMaxRecordCount": 8000, 
+    "maxRecordCountFactor": 1, 
+    "capabilities": "Query"
+}
