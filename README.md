@@ -1,5 +1,8 @@
-#
-MapManager.js
+# Arcgis for JS 使用说明
+见：
+https://www.gitbook.com/book/guangyuzhihun/arcgis_for_javascript/details
+
+# MapManager.js
 ```
 V1.1
 1.1：重构js代码，进行结构化配置
